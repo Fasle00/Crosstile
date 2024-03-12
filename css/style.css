@@ -1,0 +1,10 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+	width: min(80ch, 100vw - 4rem);
+	margin-inline: auto;
+}
