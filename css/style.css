@@ -4,7 +4,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 .sidebar {
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -28,6 +28,10 @@ body{
 .sidebar li {
 	border-bottom: 2px solid black;
 	font-size: 3rem;
+}
+
+.sidebar li:last-child {
+	border-bottom: none;
 }
 
 .sidebar a {
@@ -56,4 +60,11 @@ body{
   .not-sidebar {
 	flex-basis: 0;
 	flex-grow: 999;
+  }
+  h1{
+	font-size: 4rem;
+	text-align: center;
+  }
+main {
+	margin-block: 5rem;
   }
