@@ -2,137 +2,239 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Crosstile Rules</title>
-	<link rel="stylesheet" href="./css/style.css">
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosstile Rules</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-	<nav class="sidebar">
-		<ul>
-			<li><a href="#material">Material</a></li>
-			<li><a href="#setup">Setup</a></li>
-			<li><a href="#how-to-play">How to play</a></li>
-			<li><a href="#special">Special</a></li>
-		</ul>
-	</nav>
+    <div class="row leftrow">
+        <div class="col-3 sticky-column d-none d-sm-block d-print-none">
+            <!-- <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end"> -->
+            <nav id="sidenav" class="nav flex-column nav-button">
+                <a class="nav-link" href="#item-1">1 - Material</a>
 
-	<main class="container">
-		<h1>CrossTile</h1>
-		<div class="material" id="material">
-			<h2>Material</h2>
-			<!-- <h3>Brickor (Tiles)</h3>
-			<p>
-				Det finns ett fast antal brickor och de bestämmer alla spelares öde.
-			</p>
+                <nav class="nav flex-column nav-button">
+                    <a class="nav-link sub-item ms-3 my-1" href="#item-1-1">1.1 - Guy kort</a>
+                    <a class="nav-link sub-item ms-3 my-1" href="#item-1-2">1.2 - Act kort</a>
 
-			<h3>Guy kort</h3>
-			<p>
-				Dessa kort bestämmer din karaktär och beskriver vad dom kan göra. Rutorna överst på kortet säger hur
-				mycket
-				brickor karaktären kan ta och lägga tillbaka. Om cirkeln är ifylld så kan du välja att ta 0 brickor.
-				Från
-				cirkeln så räknar man + (du tar brickor från högen) åt höger och du räknar - (du lägger tillbaka brickor
-				i
-				högen) åt vänster. Under guy-fasen så väljer man en av de ifyllda fälten att utföra.
-			</p>
-			<p></p>
-				När du tar brickor så samlas de in i din egen hög. När du sedan lägger tillbaka brickor så måste du ha
-				tillräckligt i din egen hög för att det ska funka.
+                    <!-- <nav class="nav flex-column nav-button"> -->
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-1-2-1">1.2.1 - Static Act kort</a>
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-1-2-2">1.2.2 - Strike Act kort</a>
+                    <!-- </nav> -->
 
-				Det finns 2 sätt att åka ut. Om du tar sista brickan och om antalet brickor i högen matchar ett av din
-				karaktärs döda värden. Döda värden ser du nederst på kortet, den börjar på 1 längst till vänster, upp
-				till 7
-				längst till höger. En spelare som åker ut lägger tillbaka alla sina brickor i högen och spelet
-				fortsätter.
-			</p>
+                    <a class="nav-link sub-item ms-3 my-1" href="#item-1-3">1.3 - Tiles</a>
+                </nav>
 
-			<h3>Act kort</h3>
-			<p>
-				Det finns 2 typer av act kort, Static och Strike. Under varje spelares tur finns det en fas för att
-				kunna
-				spela ett Static act kort och de kan behöva kriterier för att kunna användas. Strike kort kan däremot
-				spelas
-				när som helst men har alltid vissa kriterier som man måste möta, som att det kan bara spelas på slutet
-				av
-				någons runda eller när någon annan spelar ett kort.
-			</p>
-			<p>
+                <a class="nav-link" href="#item-2">2 - Setup</a>
+                <a class="nav-link" href="#item-3">3 - How to play</a>
 
-				Om ett kort inte har utfört alla sina effekter direkt när det spelar, det vill säga att det kommer att
-				göra
-				något i framtiden så blir kortet aktivt. Aktiva kort ligger på bordet vända upp antingen mitt på bordet
-				eller framför en spelare som den påverkar. Vissa kort är aktiva till slutet av spelet.
+                <nav class="nav flex-column nav-button">
+                    <!-- <nav class="nav flex-column nav-button"> -->
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-1">3.0.1 - Nyckeltermer</a>
+                    <!-- </nav> -->
 
-				Om ett kort till exempel säger “Extract 1 immediately” så händer det på fasen som man befinner sig i
-				just
-				då. Om det istället säger “Extract 1 more” så händer det i kombination med spelarens guy-fas.
-			</p> -->
-			<ul>
-				<li>12st Guy kort</li>
-				<li>37st Act kort</li>
-			</ul>
-		</div>
+                    <a class="nav-link sub-item ms-3 my-1" href="#item-3-1">3.1 - Hur vinner man?</a>
+                    <a class="nav-link sub-item ms-3 my-1" href="#item-3-2">3.2 - Turordning</a>
 
+                    <!-- <nav class="nav flex-column nav-button"> -->
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-2-1">3.2.1 - Början av turen</a>
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-2-2">3.2.2 - Static-fas</a>
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-2-3">3.2.3 - Eliminerings-fas</a>
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-2-4">3.2.4 - Guy-fas</a>
+                        <a class="nav-link sub-item ms-3 my-1" href="#item-3-2-5">3.2.5 - Slutet av turen</a>
+                    <!-- </nav> -->
 
+                </nav>
 
-		<div class="setup" id="setup">
-			<h2>Setup</h2>
-			<!-- <p>Alla kort blandas och alla spelare blir får 2 guy kort var som man väljer en av och lägger den andra åt
-				sidan. Guy kortet ligger uppåtvänd framför spelaren. Varje spelare får 3 act kort och resten av dom
-				korten ligger som en hög tillgänglig för alla spelare. I mitten finns det en hög med brickor eller typ
-				vad som helst som kan ligga still på ett bord och som man lätt kan räkna. Runt 40 stycken rekommenderas
-				för 4 spelare men detta kan anpassas.
-			</p> -->
-			<p>Börja med att blanda Guy-korten och dela sen ut två Guy-kort till varje spelare med baksidan uppåtvänd.
-			</p>
-			<p>Varje spelare får nu kolla på sina Guy-kort och välja den som de vill spela som, den vänder man då upp så
-				att alla kan se vilken Guy du är. Övriga kort </p>
+                <a class="nav-link" href="#item-4">4 - Special</a>
 
-			<!--<p>När det är avklarat- så får man välja om man vill köra en enklare variant eller den lite mer kompliserade varrianten.
-				Om ni vill köra den enklare varrianten så kan ni hoppa över alla delar som handlar om hur och när Act-korten spelas.</p-->
-			<p>Blanda Act-korten och dela ut 3st till varje spelare. Lägg sedan Act-korten facedown i en hög</p>
-		</div>
+                <!-- </nav> -->
+        </div>
 
-		<div class="how-to-play" id="how-to-play">
-			<h2>How to play</h2>
-			<h3>Början av turen</h3>
-			<!--<p>Vissa Strike act kort kan spelas här.</p>-->
-			<p>Här kan alla spelare välja om de vill spela något Act-kort. Bara "Strike" Act-kort spelas (vilken typ av
-				Act-kortdet är står under bilden). När Act-kort har spelas så lägger man ner det brevid sitt Guy-kort.
-			</p>
+        <div class="col rightrow">
+            <div class="col-12">
+                <!--<h1>CrossTile</h1>-->
 
-			<h3>Static-fas</h3>
-			<!--<p>Du kan välja att spela ett Static Act kort här.</p>-->
-			<p>Här kan bara den spelare vars tur det är spela Static Act-kort</p>
+                <div >
+                    <h4 id="item-1">1 Material</h4>
+                    <ul>
+                        <li>12st Guy kort</li>
+                        <li>37st Act kort</li>
+                    </ul>
+                </div>
 
-			<h3>Eliminerings-fas</h3>
-			<p>Om antalet kort i högen matchar ett av din karaktärs döda värden så åker du ut (det är dom ifylda värdena
-				längst ner på Guy-korten, det börjar på 1 längst till vänster).</p>
-			<img src="/image/crosstileskrivut_Guy.svg" alt="" style="width: 50%; aspect-ratio: 1;">
+                <div id="item-1-1">
+                    <h5>1.1 - Guy kort</h5>
+                    <p>Ett fyrkantikt kort med taggen “Guy” nederst är ett kort som visar en karaktär och en massa
+                        värden. I den
+                        övre raden rutor betyder cirkeln i mitten noll och från den så räknar man sick-sack ända till 7
+                        till
+                        höger men också bakåt ända till -7 till vänster. Dessa är dina Extract/Restore värden.</p>
+                    <p>I den undre raden rutor så börjar man att räkna från 1 ända till vänster till 7 ända till höger.
+                        Dessa är
+                        dina Döda värden.</p>
+                </div>
 
-			<h3>Guy-fas</h3>
-			<p>Du måste välja ett värde av brickor att ta eller lägga tillbaka beroende på din karaktärs förmågor (det
-				är dom ifylda värdena under bilden, cirkeln är 0 ökar på höger sida).</p>
+                <div id="item-1-2">
+                    <h5>1.2 - Act kort</h5>
+                    <p>Ett rektangulärt kort med taggen “Act” nederst är ett kort med text som beskriver vad det gör. De
+                        kan
+                        göra allt möjligt genom spelets gång vilket kan vara till fördel eller till och med nackdel.</p>
 
-			<h3>Slutet av turen</h3>
-			<p>Här kan alla spela Strike Act-kort om dom vill.</p>
+                    <p>Om ett kort inte har utfört alla sina effekter direkt när det spelar, det vill säga att det
+                        kommer att
+                        göra något i framtiden så blir kortet aktivt. Aktiva kort ligger på bordet vända upp antingen
+                        mitt på
+                        bordet eller framför en spelare som den kommer att påverka. Vissa kort kan vara aktiva ända till
+                        slutet
+                        av spelet. Det finns två typer av dessa kort vilka är “Static” och “Strike”.
+                        All text på korten är på engelska.</p>
+                </div>
 
+                <div id="item-1-2-1">
+                    <h6>1.2.1 Static Act kort</h6>
+                    <p>Ett kort med taggen “Static” kan bara du spela under din tur under Static-fasen.</p>
+                </div>
 
-			
+                <div id="item-1-2-2">
+                    <h6>1.2.1 Strike Act kort</h6>
+                    <p>Ett kort med taggen “Strike” kan du bara spela när kriterierna som kortet har är mötta. Detta är
+                        annourlunda mellan varje kort.</p>
+                </div>
 
-		</div>
-		<div class="special" id="special">
-			<h2>Special rules and cards</h2>
-			<h3>Unfinished_1</h3>
-			<p>Unfinished_1 är ett unikt kort som är mer av en meme, men du kan spela det när du vill. Det vill säga
-				under en annan spelares Guy-fas så kan du säga stop jag måste få spela det här och då får du spela det
-				som ett vanligt Act-kort </p>
-		</div>
-	</main>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+                <div id="item-1-3">
+                    <h5>1.3 Tiles</h5>
+                    <p>Det finns ett fast antal brickor, eller “Tiles” som används som term, och de ligger i en hög
+                        mitten på bordet i en hög när spelet börjar. 40 brickor rekommenderas för 4 spelare men kan
+                        justeras beroende på antal spelare eller önskad speltid.
+                    </p>
+                </div>
+
+                <div id="item-2">
+                    <h4>2 Setup</h4>
+                    <p>
+                        Alla kort blandas och alla spelare blir får 2 guy kort, där man väljer en av dem och lägger den
+                        andra åt
+                        sidan i en hög. Guy kortet ligger uppåtvänd framför spelaren. Varje spelare får 3 Act kort och
+                        resten av
+                        korten ligger som en hög tillgänglig för alla spelare. I mitten finns det en hög med brickor
+                        eller typ
+                        vad
+                        som helst som kan ligga still på ett bord och som man lätt kan räkna. Runt 40 stycken
+                        rekommenderas för
+                        4
+                        spelare men detta kan anpassas. Spelaren till vänster om den som delade ut korten börjar.
+                    </p>
+                </div>
+
+                <div id="item-3">
+                    <h4>3 How to play</h4>
+                </div>
+
+                <div id="item-3-0-1">
+                    <h6>3.0.1 Nyckeltermer</h6>
+                    <p>Extract = En spelare, under Guy-fasen eller med hjälp av ett kort, tar brickor från högen i
+                        mitten och
+                        lägger i en egen hög.</p>
+                    <p>Restore = En spelare, under Guy-fasen eller med hjälp av ett kort lägger tillbaka brickor från
+                        sin egen
+                        hög till högen i mitten.</p>
+                    <p>Dead values (Döda värden) = Värdena som visas i den undre raden av rutor på ett Guy kort.</p>
+                    <p>Eliminated (Eliminerad) = En spelare åker ut ur spelet.</p>
+                </div>
+
+                <div id="item-3-1">
+                    <h5>3.1 Hur vinner man?</h5>
+                    <p>Spelare blir eliminerade från spelet när mängden brickor som finns i högen i mitten matchar deras
+                        Guy
+                        korts Döda värden eller när de måste ta brickor så att det finns 0 kvar.
+                    </p>
+                    <p>En eliminerad spelare lägger sina Act och sitt Guy kort åt sidan, lägger tillbaka alla sina egna
+                        brickor
+                        in i högen i mitten och spelet fortsätter.</p>
+                    <p>Du vinner spelet genom att vara den sista spelaren kvar.</p>
+                </div>
+
+                <div id="item-3-2">
+                    <h5>3.2 Turordning</h5>
+                </div>
+
+                <div id="item-3-2-1">
+                    <h6>3.2.1 Början av turen</h6>
+                    <p>Under denna fas har din tur inte börjat men vissa Strike kort kan spelas här, av dig eller någon
+                        annan.
+                    </p>
+                </div>
+
+                <div id="item-3-2-2">
+                    <h6>3.2.2 Static-fas</h6>
+                    <p>Här kan bara den spelare vars tur det är spela Static Act-kort</p>
+                </div>
+
+                <div id="item-3-2-3">
+                    <h6>3.2.3 Eliminerings-fas</h6>
+                    <p>Under denna fas så tittar du på ditt Guy korts Döda värden. Till exempel, om rutan som betyder 1
+                        i de
+                        döda värdena är ifylld och det finns 1 bricka eller “Tile” i högen i mitten, så är du
+                        eliminerad.
+                    </p>
+                    <img src="/image/crosstileskrivut_Guy.svg" alt=""
+                        style="max-width: 30rem; width: 50%; aspect-ratio: 1;">
+                </div>
+
+                <div id="item-3-2-4">
+                    <h6>3.2.4 Guy-fas</h6>
+                    <p>Du måste välja ett värde av brickor att ta eller lägga tillbaka beroende på din karaktärs Extract
+                        och Restore värden. Till exempel, om ditt Guy kort i den övre raden rutor har rutan som betyder
+                        1 ifylld så kan du välja att ta 1 bricka till din egen hög. Detta fungerar på samma sätt när det
+                        finns ett fält
+                        ifylld på den negativa sidan, där du lägger tillbaka brickor istället. Om cirkeln är ifylld så
+                        betyder det att du varken tar eller lägger tillbaka brickor. Det finns alltid mer än ett ifyllt
+                        fält på varje
+                        Guy kort och du måste välja en av dom att utföra under denna fas.</p>
+                </div>
+
+                <div id="item-3-2-5">
+                    <h6>3.2.5 Slutet av turen</h6>
+                    <p>Under denna fas har din tur slutat men vissa Strike kort kan spelas här, av dig eller någon
+                        annan.</p>
+                </div>
+
+                <div id="item-4-0">
+                    <h4>4 Special rules and cards</h4>
+                </div>
+
+                <div id="item-4-1">
+                    <h5>4.1 Flera spelade Strike kort samtidigt</h5>
+                    <p>Om två spelare spelar två Strike kort samtidigt så är det spelaren som först la ned kortet på
+                        bordet som får utföra sitt korts förmåga först. Det gäller att vara snabb. Men om spelarna
+                        lägger ned korten på bordet precis samtidigt så kan det avgöras med sten sax påse.</p>
+                </div>
+
+                <div id="item-4-2">
+                    <h5>4.2 Unfinished_1</h5>
+                    <p>Unfinished_1 är ett unikt kort som är mer av en meme, men du kan spela det när du vill. Det vill
+                        säga under en annan spelares Guy-fas så kan du säga stop jag måste få spela det här och då får
+                        du spela det som ett vanligt Act-kort </p>
+                </div>
+
+                <div id="item-4-3">
+                    <h5>4.3 Topdeck</h5>
+                    <p>Missing a word in sentence, should be “Draw 2 cards and discard one of them.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

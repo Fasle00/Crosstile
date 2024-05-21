@@ -1,70 +1,266 @@
-body{
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
-}
-.sidebar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 20%;
-	background-color: #f1f1f1;
-	padding: 1rem;
-	box-sizing: border-box;
-	float: left;
-	display: grid;
-	align-items: center;
-}
-
-.sidebar ul {
-	position: sticky;
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: grid;
-}
-
-.sidebar li {
-	border-bottom: 2px solid black;
-	font-size: 3rem;
-}
-
-.sidebar li:last-child {
-	border-bottom: none;
-}
-
-.sidebar a {
-	text-decoration: none;
-	color: #333;
-}
-
-.sidebar a:hover {
-	color: #666;
-}
-
-.container{
-	max-width: 36rem;
-	margin-inline: auto;
-}
-.with-sidebar {
-	display: flex;
-	flex-wrap: wrap;
+/* scroll spy */
+body {
+    position: relative;
   }
   
-  .sidebar {
-	flex-basis: 20rem;
-	flex-grow: 1;
+  /* smooth scrolling (for modern browsers. Older browsers use JS code instead) */
+  html {
+    scroll-behavior: smooth;
   }
   
-  .not-sidebar {
-	flex-basis: 0;
-	flex-grow: 999;
+  
+  /* ---------- other --------- */
+  /* top horizontal navbar */
+  .navbar {
+      background-color: RoyalBlue;
+  } 
+  
+  
+  @media screen and (max-width: 767px) {
+    .navbar-collapse {
+      padding-top: 25px;
+    }
   }
-  h1{
-	font-size: 4rem;
-	text-align: center;
+  
+  /* fixed top navbar when scrolling */
+  .mySticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* header stays above scrolling content */
+    z-index: 99
   }
-main {
-	margin-block: 5rem;
+  
+  
+  
+  
+  /* sidebar nav -stays in same location while scrolling */ 
+  .sticky-column {
+    position: -webkit-sticky;
+    position: sticky;
+    /* top alignment of sidebar nav */
+    top: 0rem;
+    /* general appearance */
+    background: WhiteSmoke;
+    /* gray outline around navbar area
+    border: 1px solid DarkGray; */
+    /* rounded corners of navbar area */  
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+   
+    /* scrollbar appears with screens not high enough to display entire sidebar nav, otherwise hidden */
+          overflow: auto;
+          /* change "6rem" value height of when scrollbar appears */
+          max-height: calc(100vh - 6rem);
+  /* scrollbar appearance (Firefox only) */  
+          scrollbar-width: thin;
+          scrollbar-color: LightGray white; 
+       /* scrollbar on left side   direction: rtl;*/        
   }
+    
+  /* scrollbar appearance (webkit browsers) */ 
+  /* width */
+  .sticky-column::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  .sticky-column::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px WhiteSmoke; 
+    border-radius: 10px;
+  }
+  /* Handle */
+  .sticky-column::-webkit-scrollbar-thumb {
+    background: Darkgray; 
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  .sticky-column::-webkit-scrollbar-thumb:hover {
+    background: Gray; 
+  }
+    
+    
+  
+  
+  
+  /* styling of left (text-area) row */
+  .leftrow {
+      padding: 50;
+      align-items: flex-start;
+      background: white;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  
+  
+  
+  /* styling of right row */
+  .rightrow {
+  /*  background-color: white; */
+  }
+  
+  
+  
+  /* collapse columns if required */
+  .sticky-column .nav-button > .nav-link + nav {
+  /* CHANGED .nav-pills to .nav-button */
+    display: none;  
+  }
+  
+  /* sub-items opened */
+  .sticky-column .nav-button > .nav-link.active + nav {
+       display: block;
+   }
+  
+  /* end collapse columns */
+  .main-header {
+    margin:0;
+    padding:2rem;
+  }
+  
+  /* -- sidebar nav styles -- */
+  /* main-items side-navbar text color */
+  .nav-link {
+    display: block;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: DimGray; 
+  }
+  
+  /* sub-items  */
+  .flex-column > .sub-item {
+    font-size: 13px;
+    font-weight: 300;
+    color: DimGray;
+  }
+  
+  
+  /* active item (currently selected item) 
+  ------ rectangular block background ----- */
+   .nav-link.active {
+    /* rounded corners */
+    border-radius: 5px;
+    padding-left: 10px;
+    font-weight: 500;
+    color: white;
+    background: RoyalBlue;
+  }   
+  
+  
+  /* OR.... USE THIS: active item (currently selected item) 
+  ------ thin vertical line ----- */
+  /* .nav-link.active {
+    padding-left: 18px;
+    font-weight: 900;
+    color: DarkGray;
+    background-color: transparent;
+    border-left: 3px solid RoyalBlue;
+  } */
+  
+  
+  
+  
+  
+  
+  /* item hover (when hovering mouse over) */
+  .flex-column > .nav-link:focus,
+  .flex-column > .nav-link:hover {
+      /* rounded corners */   
+    border-radius: 5px;   
+    padding-left: 10px;
+    color: white;
+    background: LightGray;
+    text-decoration: none;
+    font-weight: 700;   */
+    /* UNUSED border line  
+        border-left: 1px solid #563d7c; */
+    }     
+  
+  /* OR.... USE THIS -a thin vertical line */
+  /* .flex-column > .nav-link:focus,
+  .flex-column > .nav-link:hover {
+    .nav-link.active {
+    padding-left: 18px;
+    font-weight: 900;
+    color: Orange;
+    background-color: Red;
+    border-left: 3px solid RoyalBlue;
+  }    */
+  
+  
+  
+  /* hack for offset as "data-offset" not working in scroll spy */
+  /* not needed when top navbar hides while scrolling down      */
+  /* .myContainer h4:before,
+  .myContainer h5:before{
+    content:"";
+    display:block;
+    padding-top:85px;
+    margin-top:-85px;
+    pointer-events:none;
+  } */
+  
+  
+  /* -------- FOR GUIDANCE -------- */
+  /* framing of content boxes (to see the layout) */
+  /* div[class*='col'] {
+          border-width: 1px;
+          border-style: dotted;
+          border-color: LightGray;
+  
+  }   */
+  
+  
+  
+  
+  
+  /* styling of sidebar-navigation section */
+  /* 
+  .sidenav {
+    margin: 0.1rem;
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+    background-color: purple;
+  } 
+  */
+  
+  
+  
+  
+  
+  /* styling of footer section */
+  .footer_section {
+    border-radius: 0.3rem;
+    margin: 0.1rem;
+    padding: 0.5rem;
+  }
+  
+  
+  /* ======================== */
+  /* scroll to top button */
+  .back_to_top {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      display: none;
+  }
+/*
+#navbar-example3 > *{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    box-sizing: border-box;
+    /*display: grid;
+    align-items: center;
+    list-style: none;
+    align-content: center;
+}
+
+#navbar-example3 > {
+    text-decoration: none;
+    color: #333;
+}*/
